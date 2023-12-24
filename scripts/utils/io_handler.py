@@ -16,7 +16,7 @@ class InputOutputHandler:
                 print("\nINFO: <logs> directory already exists...\nProceeding...")
         except Exception as e:
             print(f"""
-                  * * * An error occurred attempting trying to create the <logs> directory * * *
+                  * * * An error occurred while attempting trying to create the <logs> directory * * *
 
                   ERROR: {str(e)}
                   """)
