@@ -1,5 +1,6 @@
 from utils.io_handler import InputOutputHandler
 from constants.constants import Constants
+import datetime
 
 
 class ErrorHandler:
@@ -11,9 +12,9 @@ class ErrorHandler:
 
     def parse_error(self, error: Exception) -> str:
         result: str = f"""
-              * * * AN ERROR OCCURRED * * *
-                  __EXCEPTION DETAILS__
-                        {error}
+        * * * AN ERROR OCCURRED * * *
+        __EXCEPTION DETAILS__
+        TIME_STAMP: {datetime.datetime.now()} -> {error}
             """
         # Log error -> OPTIONAL
         self.log_error(result)

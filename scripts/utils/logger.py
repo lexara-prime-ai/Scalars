@@ -1,5 +1,6 @@
 from utils.io_handler import InputOutputHandler
 from constants.constants import Constants
+import datetime
 
 
 class Logger:
@@ -11,10 +12,10 @@ class Logger:
 
     def parse_entry(self, message: str) -> str:
         result: str = f"""
-              * * * NEW LOG ENTRY * * *
-                  __ENTRY DETAILS__
-                     {message}
-            """
+        * * * NEW LOG ENTRY * * *
+            __ENTRY DETAILS__
+            TIME_STAMP: {datetime.datetime.now()} -> {message}
+        """
         # Log entry -> OPTIONAL
         self.log_entry(result)
         return result

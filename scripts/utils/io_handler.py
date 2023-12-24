@@ -28,7 +28,6 @@ class InputOutputHandler:
         try:
             if not os.path.exists(self.base_path):
                 self.create_logs_directory()
-                # Perform IO operations
                 self.perform_io_operations(path, io_option, content)
             else:
                 print(f"""
@@ -36,8 +35,7 @@ class InputOutputHandler:
                                     FILE_PATH: {path}
                                     FILE_IO_OPTION: {io_option}
                 """)
-
-                # Perform IO operations
+                
                 self.perform_io_operations(path, io_option, content)
         except Exception as e:
             print(f"""
