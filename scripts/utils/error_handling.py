@@ -1,8 +1,13 @@
+from utils.io_handler import InputOutputHandler
+from constants.constants import Constants
+
+
 class ErrorHandler:
     def __init__(self) -> None:
         self.util_identifier: str = "ERROR_HANDLER"
-        self.file_paths: list[str] = ["error_logs.txt"]
-        self.file_io_options: list[str] = ["a", "w", "r"]
+        self.file_path: list[str] = Constants.FILE_PATHS[1]
+        self.file_io_option: list[str] = Constants.FILE_IO_OPTIONS[0]
+        self.io_handler = InputOutputHandler()
 
     def parse_error(self, error: Exception) -> str:
         result: str = f"""
@@ -15,11 +20,5 @@ class ErrorHandler:
         return result
 
     def log_error(self, parsed_error: str):
-        print(f"""
-            * * * WRITING TO FILE WITH THE FOLLOWING OPTIONS * * *
-              FILE_PATH: {self.file_paths[0]}
-              FILE_IO_OPTION: {self.file_io_options[0]}
-        """)
-        f = open(self.file_paths[0], self.file_io_options[0])
-        f.write(parsed_error)
-        f.close()
+        self.io_handler.write_to_file(
+            self.file_path, self.file_io_option, parsed_error)
