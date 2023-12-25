@@ -13,7 +13,7 @@ class Program:
 
     def package_installer(self, package_name: str):
         try:
-            print(f"Attempting to install package: {package_name}")
+            print(f"> Attempting to install package: {package_name}")
 
             result = subprocess.check_call([
                 sys.executable,

@@ -16,7 +16,7 @@ class ErrorHandler:
         __EXCEPTION DETAILS__
         TIME_STAMP: {datetime.datetime.now()} -> {error}
             """
-        # Log error -> OPTIONAL
+        # Log error -> <OPTIONAL>
         self.log_error(result)
         return result
 

@@ -19,7 +19,7 @@ class InputOutputHandler:
                 print("\nINFO: <logs> directory already exists...\nProceeding...")
         except Exception as e:
             print(f"""
-                  * * * An error occurred while attempting trying to create the <logs> directory * * *
+                  * * * An error occurred while attempting to create the <logs> directory * * *
 
                   ERROR: {str(e)}
                 """)
@@ -39,7 +39,7 @@ class InputOutputHandler:
                 self.perform_io_operations(path, io_option, content)
         except Exception as e:
             print(f"""
-                  * * * An error occurred while attempting trying to perform IO operations * * *
+                  * * * An error occurred while attempting to perform IO operations * * *
 
                   ERROR: {str(e)}
                 """)
@@ -51,7 +51,7 @@ class InputOutputHandler:
             file_operations.close()
         except Exception as e:
             print(f"""
-                  * * * An error occurred while attempting trying to perform IO operations * * *
+                  * * * An error occurred while attempting to perform IO operations * * *
 
                   ERROR: {str(e)}
                 """)
