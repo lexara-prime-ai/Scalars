@@ -16,7 +16,7 @@ class Logger:
             __ENTRY DETAILS__
             TIME_STAMP: {datetime.datetime.now()} -> {message}
         """
-        # Log entry -> OPTIONAL
+        # Log entry -> <OPTIONAL>
         self.log_entry(result)
         return result
 
