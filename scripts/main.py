@@ -23,7 +23,19 @@ class Program:
                 package_name
             ])
 
-            self.logging.parse_entry("Yes I attempted...")
+            # Log entry
+            self.logging.parse_entry(result)
+
+            # Handle imports "dynamically"
+            import torch as pt
+
+            # ------------------------#
+            # Working with [Scalars]
+            x_pt = pt.tensor(36)
+            print(f"OUTPUT: {x_pt}")
+            print(f"TENSOR_SHAPE: {x_pt.shape}")
+            print(f"TENSOR_TYPE: {x_pt.type()}")
+
         except Exception as e:
             self.error_handling.parse_error(e)
 
